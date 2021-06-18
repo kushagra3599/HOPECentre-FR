@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missing Person Finder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+    <header class="continer-fluid ">
+        <div id="menu-jk" class="header-bottom">
+            <div class="container">
+                <div class="row nav-row">
+                    <div class="col-lg-4 col-md-12 logo">
+                        <a href="{{ url_for('index') }}">
+                            <img src="{{ url_for('static', filename='images/logo2.png') }}" alt="missing person finder">
+                            <a data-toggle="collapse" data-target="#menu" href="#menu"><i
+                                    class="fas d-block d-lg-none  small-menu fa-bars"></i></a>
+                        </a>
+                    </div>
+                    <div id="menu" class="col-lg-8 col-md-12 d-none d-lg-block nav-col">
+
+                        <ul class="navbad">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('services') }}">Find Missing Person</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('ngo') }}">NGOs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="slider">
+        <div class="owl-carousel ">
+            <div class="slider-img">
+                <div class="item">
+                    <div class="slider-img"><img style="width:100%;" src="{{ url_for('static', filename='images/slider/slider-4.png') }}" alt=""></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-offset-2 col-sm-12 col-xs-12">
+                                <div class="animated bounceInDown slider-captions">
+                                    <h1 class="slider-title" style="margin-bottom: 20px;text-align:left;font-size: 62px;">It is the not knowing<br> that hurts the <br>most . . .</h1>
+                                    <p><div style="padding-left: 0px;" class="donate-link col-md-3"><a style="border-radius: 50px;cursor:pointer;background-color:#007bff;color:#fff;border: #ccccccc9 1px solid;" href="{{ url_for('services') }}" class="btn "><span class="btn-title">Find a missing person</span></a></div></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="slider-img"><img src="{{ url_for('static', filename='images/slider/slider-5.jpg') }}" alt=""></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-offset-2 col-sm-12 col-xs-12">
+                            <div class="slider-captions ">
+                                <h1 class="slider-title" style="background-color: #272b2fa1;color: #fff;display: inline;">Sometimes, when one person is missing, the world seems depopulated . . .</h1>                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="slider-img"><img style="width:100%;" src="{{ url_for('static', filename='images/slider/slider-6.jpg') }}" alt=""></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-offset-2 col-sm-12 col-xs-12">
+                            <div class="slider-captions ">
+                                <h1 class="slider-title" style="background-color: #272b2fa1;color: #fff;display: inline;">Missing someone and not being able to see them is the worst feeling . . .</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-us container-fluid">
+        <div class="container">
+    
+            <div class="row natur-row no-margin w-100">
+                <div class="text-part col-md-6">
+                    <h2>The Harsh Reality</h2>
+                    <p>A deeply disturbing fact about India’s missing children is that while on an average 174 
+                        children go missing every day, half of them remain untraceable. The National Crime 
+                        Records Bureau (NCRB) report which was cited by the Ministry of Home Affairs (MHA) 
+                        in the Parliament (LS Q no. 3928, 20–03–2018), more than one lakh children 
+                        (1,11,569 in actual numbers) were reported to have gone missing till 2016, and 
+                        55,625 of them remained untraceable till the end of the year.</p>
+
+                    <p> The statistics are however, indicative of the absence of a national Missing 
+                        Children’s repository. “There are no budgets earmarked for tracking missing 
+                        people,” said an official source.</p>
+    
+                    <p>The traditional methods of spreading pamphlets or using newspapers as a mode 
+                        of searching for any missing person we want to bring power of technology to 
+                        automate this tedious process.
+                    </p>
+                </div>
+                <div class="image-part col-md-6">
+                    <div class="about-quick-box row">
+                        <div class="col-md-6">
+                            <div class="about-qcard">
+                                <i class="fas fa-search-location"></i>
+                                <p>Find Missing Person</p>
+                            </div>
+                        </div>
+                         <div class="col-md-6">
+                            <div class="about-qcard ">
+                                <i class="fas fa-user"></i>
+                                <p>Connect With NGOs</p>
+                            </div>
+                        </div>
+                         <div class="col-md-6">
+                            <div class="about-qcard ">
+                                <i class="fas fa-donate yell"></i>
+                                <p>Give Donation</p>
+                            </div>
+                        </div>
+                         <div class="col-md-6">
+                            <div class="about-qcard ">
+                               <i class="fas fa-hands-helping blu"></i>
+                                <p>Help Us Find</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="container-fluid mission-vision" style="background-color:#dce8f4cf;">
+        <div class="container">
+            <div class="row mission">
+                <div class="col-md-6 mv-det">
+                    <h1>Our Mission</h1>
+                    <p>
+                        Among all the persons who are reported to be missing, actually only few of them are out of our reach. Most of them are waiting somewhere for someone to help them connect with their family. That “Someone” can be you or anyone like us. 
+                    </p>
+                    <p>Our mission is to be a lifeline to every missing person, and every family member and friend left behind, or to bring the information to the lost people to their families or friends.</p>
+                    <p style="margin-top:15px;"><div style="padding-left: 0px;" class="donate-link col-md-3"><a style="border-radius: 50px;cursor:pointer;border: #ccccccc9 1px solid;" href="{{ url_for('services') }}" class="btn btn-primary"><span class="btn-title">Find a missing person &nbsp; <i class="fas fa-arrow-circle-right"></i></span></a></div></p>
+                </div>
+                <div class="col-md-6 mv-img">
+                    <img style="border: #fff solid 10px;" src="{{ url_for('static', filename='images/mision.jpg') }}" alt="">
+                </div>
+            </div>
+            <div class="row vision">
+                <div class="col-md-6 mv-img">
+                     <img src="{{ url_for('static', filename='images/vision.jpg') }}" alt="">
+                </div>
+                <div class="col-md-6 mv-det">
+                     <h1>Our Vision</h1>
+                     <p>Our vision is for every missing child and adult, and every loved one left behind, to find help, hope and a safe way to reconnect.</p>
+                     <p style="margin-top:15px;"><div style="padding-left: 0px;" class="donate-link col-md-3"><a style="border-radius: 50px;cursor:pointer;border: #ccccccc9 1px solid;" href="{{ url_for('ngo') }}" class="btn btn-primary"><span class="btn-title">See list of NGOs &nbsp; <i class="fas fa-arrow-circle-right"></i></span></a></div></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="events">
+        <div class="container">
+            <div class="session-title row">
+                <h2>List Of NGOs</h2>
+                <p>The List is updated continuously</p> 
+            </div>
+            <div class="event-ro row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="event-box">
+                        <img src="{{ url_for('static', filename='images/events/image_02.jpg') }}" alt="">
+                        <h4>Education cum vocational association</h4>
+                        <p class="raises"><span>Contact : 01292249863</span></p>
+                        <p class="desic">Address : 100 Feet Road, Near Bora Public School, Chawala Colony, Chawala Colony, Faridabad, Haryana 121004 </p>
+                        <a target="_blank" href="https://www.google.com/maps/place/Educational+Cum+Vocational+Association+For+The+Disabled/@28.3821984,77.2330763,12z/data=!4m9!1m2!2m1!1sEducational+Cum+Vocational+Association+For+The+Disabled!3m5!1s0x390cdc3c2e0cb663:0x8c683c4e794383b8!8m2!3d28.3822889!4d77.3030292!15sCjdFZHVjYXRpb25hbCBDdW0gVm9jYXRpb25hbCBBc3NvY2lhdGlvbiBGb3IgVGhlIERpc2FibGVkkgEcc29jaWFsX3NlcnZpY2VzX29yZ2FuaXphdGlvbghttps://www.google.com/maps/place/Educational+Cum+Vocational+Association+For+The+Disabled/@28.3821984,77.2330763,12z/data=!4m9!1m2!2m1!1sEducational+Cum+Vocational+Association+For+The+Disabled!3m5!1s0x390cdc3c2e0cb663:0x8c683c4e794383b8!8m2!3d28.3822889!4d77.3030292!15sCjdFZHVjYXRpb25hbCBDdW0gVm9jYXRpb25hbCBBc3NvY2lhdGlvbiBGb3IgVGhlIERpc2FibGVkkgEcc29jaWFsX3NlcnZpY2VzX29yZ2FuaXphdGlvbg" class="btn btn-success btn-sm">Locate Us</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="event-box">
+                        <img src="{{ url_for('static', filename='images/events/image_01.jpg') }}" alt="">
+                        <h4>New hope charitable society</h4>
+                        <p class="raises"><span>Contact : 9899523653/01294107443</span></p>
+                        <p class="desic">Address : H. No. 496, Indira Gandhi Colony, Sector 21B, Faridabad, Haryana 121001 </p>
+                        <a target="_blank" href="https://www.google.com/maps/place/Missing+Person+Helpline+run+by+New+Hope+Charitable+Society/@28.4194323,77.3017104,17z/data=!3m1!4b1!4m5!3m4!1s0x390cdd9eda1451eb:0x806a7c6ac0517c73!8m2!3d28.4194325!4d77.3039073" class="btn btn-success btn-sm">Locate Us</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="event-box">
+                        <img src="{{ url_for('static', filename='images/events/image_03.jpg') }}" alt="">
+                        <h4>Association for the Welfare of Handicapped</h4>
+                        <p class="raises"><span>Contact : 0129248609,9899154609</span></p>
+                        <p class="desic">Address : Plot No. 4, Dabua Pali Rd, near Jain Mandir, Nehru Colony, New Industrial Town, Faridabad, Haryana 121001 </p>
+                        <a target="_blank" href="https://www.google.com/maps/place/Association+for+the+Welfare+of+Handicapped/@28.3895697,77.2785199,17z/data=!3m1!4b1!4m5!3m4!1s0x390cde84a085d4ab:0xb6ef9cbdfd650296!8m2!3d28.3895697!4d77.2807086" class="btn btn-success btn-sm">Locate Us</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center;margin-top:40px;" class="gallery-filter d-sm-block"><a style="font-size: 25px;" class="btn btn-sm btn-default filter-button" href="{{ url_for('ngo') }}">View Complete List</a></div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <h2>About Us</h2>
+                    <p>
+                        Our platform is an application where individuals can scan and upload data of any person who they believe are missing.
+                    </p>
+                    <p>Our product will extract the face from those image scans and will save it with the data (eg Name, Age, Father/Mother Name, current location etc) of the missing person.
+                    </p>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <h2>Useful Links</h2>
+                    <ul class="list-unstyled link-list">
+                        <li><a ui-sref="home" href="{{ url_for('index') }}">Home</a><i class="fa fa-angle-right"></i></li>
+                        <li><a ui-sref="about" href="{{ url_for('ngo') }}">NGOs</a><i class="fa fa-angle-right"></i></li>
+                        <li><a ui-sref="products" href="{{ url_for('services') }}">Find Missing Person</a><i class="fa fa-angle-right"></i></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-12 map-img">
+                    <h2>Contact Us</h2>
+                    <address class="md-margin-bottom-40">
+                        Manipal University Jaipur <br>
+                        Jaipur-Ajmer Express Highway, Dehmi Kalan <br>
+                        Jaipur, Rajasthan, INDIA <br>
+                        Phone: <a href="tel:+919643590272"> 9643590272</a> <br>
+                        Email: <a href="mailto:missing-person-finder@gmail.com" class="">missing-person-finder@gmail.com</a><br>
+                    </address>
+
+                </div>
+            </div>
+            <div class="nav-box row clearfix">
+                <div class="inner col-md-9 clearfix">
+                    <ul class="footer-nav clearfix">
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li><a href="{{ url_for('ngo') }}">NGOs</a></li>
+                    </ul>
+                </div>
+                  <div class="donate-link col-md-3"><a href="{{ url_for('services') }}" class="btn btn-primary "><span class="btn-title">Find Missing Person</span></a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='plugins/scroll-fixed/jquery-scrolltofixed-min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="https://kit.fontawesome.com/612fc82eca.js" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missing Person Finder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+    <header class="continer-fluid ">
+        <div id="menu-jk" class="header-bottom">
+            <div class="container">
+                <div class="row nav-row">
+                    <div class="col-lg-4 col-md-12 logo">
+                        <a href="{{ url_for('index') }}">
+                            <img src="{{ url_for('static', filename='images/logo2.png') }}" alt="missing person finder">
+                            <a data-toggle="collapse" data-target="#menu" href="#menu"><i
+                                    class="fas d-block d-lg-none  small-menu fa-bars"></i></a>
+                        </a>
+                    </div>
+                    <div id="menu" class="col-lg-8 col-md-12 d-none d-lg-block nav-col">
+
+                        <ul class="navbad">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('services') }}">Find Missing Person</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('ngo') }}">NGOs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-nav no-margin row" style="background-color: #dce8f4cf;">
+        <div class="container">
+            <div class="row">
+                <h2 style="color: #212529;">Missing Person Finder</h2>
+                <ul>
+                    <li style="color: #212529;"><a href="{{ url_for('index') }}"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li style="color: #212529;"><a href="{{ url_for('services') }}"><i class="fas fa-angle-double-right"></i> Services</a>
+                    </li>
+                    <li style="color: #212529;"><i class="fas fa-angle-double-right"></i> Upload</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="inner-lay">
+            <div class="container">
+                <div class="row">
+                    <div style="padding:20px;padding-top:30px;" class="text-part col-md-5">
+                        <h2 style="margin-bottom: 30px;">How To Use The Person Finder</h2>
+                        <ol>
+                            <li>
+                                <p>1) Our person finder is an application where individuals can scan and upload data of
+                                any person who they believe are missing.</p><br>
+                            </li>
+                            <li>
+                                <p>2) The Finder will extract the face from those image scans and will save it with the
+                                    data (eg Name, Age, Father/Mother Name, current location etc) of the missing person.</p><br>
+                            </li>
+                            <li>
+                                <p>3) The Face recognition system will display the uploaded data if the same face is
+                                    uploaded by the family of the missing person providing them with some information for
+                                    locating their family member.</p><br>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-sm-1"></div>
+                    <div style="padding:30px;" class="col-sm-6">
+                        <h2 >Provide Details</h2> <br>
+                        <form action = "/exec" method="post">
+                            <div class="row cont-row">
+                                <div  class="col-sm-4"><label>Enter Name </label><span>:</span></div>
+                                <div class="col-sm-8"><input type="text" placeholder="Enter Name" name="name" class="form-control input-sm"  ></div>
+                            </div>
+                            <div  class="row cont-row">
+                                <div  class="col-sm-4"><label>Enter Age </label><span>:</span></div>
+                                <div class="col-sm-8"><input type="number" name="age" placeholder="Enter Age" class="form-control input-sm" min="0" max="120" ></div>
+                            </div>
+                            <!-- <div class="row cont-row">
+                                <div  class="col-sm-4"><label>Enter Father Name </label><span>:</span></div>
+                                <div class="col-sm-8"><input type="text" placeholder="Enter Father/Mother Name" name="fmname" class="form-control input-sm"  ></div>
+                            </div> -->
+                            <!-- <div class="row cont-row">
+                                <div  class="col-sm-4"><label>Location Last Seen </label><span>:</span></div>
+                                <div class="col-sm-8"><input type="text" placeholder="Enter Location" name="locn" class="form-control input-sm"  ></div>
+                            </div> -->
+                            <div class="row cont-row" style="margin-bottom:12px;">
+                                <div  class="col-sm-4"><label>Enter Gender </label><span>:</span></div>
+                                <div class="col-sm-8">
+                                    <input type="radio" id="M" value="M" name="gender" ><label for="M">Male</label>
+                                    <input type="radio" id="F" value="F" name="gender" ><label for="F">Female</label>
+                                </div>
+                            </div>
+                             <div class="row cont-row">
+                                <div  class="col-sm-4"><label>Location Last Seen </label><span>:</span></div>
+                                <div class="col-sm-8"><input type="text" placeholder="Enter Location" name="location" class="form-control input-sm"  ></div>
+                            </div>
+                            <div class="row">
+                                <div style="padding-top:10px;" class="col-sm-4"><label></label></div>
+                                <div class="col-sm-8">
+                                    <button type="submit" class="btn btn-primary btn-sm" style="border-radius: 50px;cursor:pointer;border: #ccccccc9 1px solid;">Upload&nbsp; <i class="fas fa-arrow-circle-right"></i></button>
+                                    <!-- <a style="border-radius: 50px;cursor:pointer;border: #ccccccc9 1px solid;" href="/exec" class="btn btn-primary btn-sm">Upload&nbsp; <i class="fas fa-arrow-circle-right"></i></a> -->
+                                </div>
+                            </div>
+                        </form>
+                    </div>            
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <h2>About Us</h2>
+                    <p>
+                        Our platform is an application where individuals can scan and upload data of any person who they believe are missing.
+                    </p>
+                    <p>Our product will extract the face from those image scans and will save it with the data (eg Name, Age, Father/Mother Name, current location etc) of the missing person.
+                    </p>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <h2>Useful Links</h2>
+                    <ul class="list-unstyled link-list">
+                        <li><a ui-sref="home" href="{{ url_for('index') }}">Home</a><i class="fa fa-angle-right"></i></li>
+                        <li><a ui-sref="about" href="{{ url_for('ngo') }}">NGOs</a><i class="fa fa-angle-right"></i></li>
+                        <li><a ui-sref="products" href="{{ url_for('services') }}">Find Missing Person</a><i class="fa fa-angle-right"></i></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-12 map-img">
+                    <h2>Contact Us</h2>
+                    <address class="md-margin-bottom-40">
+                        Manipal University Jaipur <br>
+                        Jaipur-Ajmer Express Highway, Dehmi Kalan <br>
+                        Jaipur, Rajasthan, INDIA <br>
+                        Phone: <a href="tel:+919643590272"> 9643590272</a> <br>
+                        Email: <a href="mailto:missing-person-finder@gmail.com" class="">missing-person-finder@gmail.com</a><br>
+                    </address>
+
+                </div>
+            </div>
+            <div class="nav-box row clearfix">
+                <div class="inner col-md-9 clearfix">
+                    <ul class="footer-nav clearfix">
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li><a href="{{ url_for('ngo') }}">NGOs</a></li>
+                    </ul>
+                </div>
+                  <div class="donate-link col-md-3"><a href="{{ url_for('services') }}" class="btn btn-primary "><span class="btn-title">Find Missing Person</span></a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/612fc82eca.js" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='plugins/scroll-fixed/jquery-scrolltofixed-min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

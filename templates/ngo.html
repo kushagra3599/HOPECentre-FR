@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missing Person Finder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+    <header class="continer-fluid ">
+        <div id="menu-jk" class="header-bottom">
+            <div class="container">
+                <div class="row nav-row">
+                    <div class="col-lg-4 col-md-12 logo">
+                        <a href="{{ url_for('index') }}">
+                            <img src="{{ url_for('static', filename='images/logo2.png') }}" alt="missing person finder">
+                            <a data-toggle="collapse" data-target="#menu" href="#menu"><i
+                                    class="fas d-block d-lg-none  small-menu fa-bars"></i></a>
+                        </a>
+                    </div>
+                    <div id="menu" class="col-lg-8 col-md-12 d-none d-lg-block nav-col">
+
+                        <ul class="navbad">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('services') }}">Find Missing Person</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('ngo') }}">NGOs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-nav no-margin row" style="background-color: #dce8f4cf;">
+        <div class="container">
+            <div class="row">
+                <h2 style="color: #212529;">List of NGOs</h2>
+                <ul>
+                    <li style="color: #212529;"> <a href="{{ url_for('index') }}"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li style="color: #212529;"><i class="fas fa-angle-double-right"></i> List of NGOs</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <section class="events">
+        <div class="container">
+            <div class="row d-flex justify-content-between mx-auto mt-4 mb-3">
+                <h1 class="h3 ml-2 mb-3 text-info"></h1>
+                <div class="col-lg-8 col-md-12">
+                    <div class="row justify-content-end">
+                        <div class="input-group col-lg-10 col-md-12" style="padding-right:0px;">
+                            <div class="input-group-prepend">
+                                <span class="form-control text-white text-primary" style="background-color:#dce8f4cf;border-radius:10px 0px 0px 10px;">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <input class="form-control" id="search-box" type="text" name="search"style="margin-bottom:20px;background-color:#fff;border-radius:0px 10px 10px 0px;" placeholder="To search start typing... "
+                                required="required" />
+                            <div class="input-group-append"><select class="form-control text-capitalize"
+                                    id="search-filter" name="search-filter" style="background-color:#dce8f4cf;border-radius:10px;">
+                                    <option value="listitem">All</option>
+                                    <option value="name">Name</option>
+                                    <option value="contact">Contact</option>
+                                    <option value="address">Address</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-ro row" style="margin-bottom:40px;">
+                <div class="col-md-4 col-sm-6 reorder">
+                    <div class="event-box">
+                        <img src="{{ url_for('static', filename='images/events/image_04.jpg') }}" alt="">
+                        <h4 class="td-name">Deepalaya</h4>
+                        <p class="td-contact raises"><span>Contact : +91-01128525908</span></p>
+                        <p class="td-address desic">Address : 46, Institutional Area, D - Block, Janak Puri, New Delhi - 110058 </p>
+                        <a target="_blank" href="https://www.google.com/maps/place/Deepalaya+Corporate+Office/@28.6090707,77.0996433,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1b5585251a39:0xc6577bead0bb63d1!8m2!3d28.609066!4d77.101832" class="btn btn-success btn-sm">Locate Us</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 reorder">
+                    <div class="event-box">
+                        <img src="{{ url_for('static', filename='images/events/image_01.jpg') }}" alt="">
+                        <h4 class="td-name">New hope charitable society</h4>
+                        <p class="td-contact raises"><span>Contact : 9899523653/01294107443</span></p>
+                        <p class="td-address desic">Address : H. No. 496, Indira Gandhi Colony, Sector 21B, Faridabad, Haryana 121001 </p>
+                        <a target="_blank" href="https://www.google.com/maps/place/Missing+Person+Helpline+run+by+New+Hope+Charitable+Society/@28.4194323,77.3017104,17z/data=!3m1!4b1!4m5!3m4!1s0x390cdd9eda1451eb:0x806a7c6ac0517c73!8m2!3d28.4194325!4d77.3039073" class="btn btn-success btn-sm">Locate Us</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 reorder">
+                    <div class="event-box">
+                        <img src="{{ url_for('static', filename='images/events/image_05.jpg') }}" alt="">
+                        <h4 class="td-name">Delhi Council for Child Welfare</h4>
+                        <p class="td-contact raises"><span>Contact : +91-01123923315</span></p>
+                        <p class="td-address desic">Address : Qudsia Bagh, Yamuna Marg, Civil Lines, New Delhi - 110054, Delhi </p>
+                        <a target="_blank" href="https://www.google.com/maps/place/Delhi+Council+For+Child+Welfare/@28.6719755,77.2261458,17z/data=!3m1!4b1!4m5!3m4!1s0x390cfda799fdfc01:0x223efb317dc5e5a0!8m2!3d28.6719755!4d77.2283345" class="btn btn-success btn-sm">Locate Us</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 reorder">
+                    <div class="event-box">
+                        <img src="{{ url_for('static', filename='images/events/image_06.jpg') }}" alt="">
+                        <h4 class="td-name">HelpAge India</h4>
+                        <p class="td-contact raises"><span>Contact :+91 01142030432</span></p>
+                        <p class="td-address desic">Address : C- 14, Qutab Institutional Area, New Delhi, Delhi - 110016 </p>
+                        <a target="_blank" href="https://www.google.com/maps/place/HelpAge+India/@28.5370726,77.1863996,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1dfa3e2411b5:0xccd66038465a9252!8m2!3d28.5370545!4d77.188644" class="btn btn-success btn-sm">Locate Us</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 reorder">
+                    <div class="event-box">
+                        <img src="{{ url_for('static', filename='images/events/image_03.jpg') }}" alt="">
+                        <h4 class="td-name">Association for the Welfare of Handicapped</h4>
+                        <p class="td-contact raises"><span>Contact : 0129248609,9899154609</span></p>
+                        <p class="td-address desic">Address : Plot No. 4, Dabua Pali Rd, near Jain Mandir, Nehru Colony, New Industrial Town, Faridabad, Haryana 121001 </p>
+                        <a target="_blank" href="https://www.google.com/maps/place/Association+for+the+Welfare+of+Handicapped/@28.3895697,77.2785199,17z/data=!3m1!4b1!4m5!3m4!1s0x390cde84a085d4ab:0xb6ef9cbdfd650296!8m2!3d28.3895697!4d77.2807086" class="btn btn-success btn-sm">Locate Us</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 reorder">
+                    <div class="event-box">
+                        <img src="{{ url_for('static', filename='images/events/image_02.jpg') }}" alt="">
+                        <h4 class="td-name">Education cum vocational association</h4>
+                        <p class="td-contact raises"><span>Contact : 01292249863</span></p>
+                        <p class="td-address desic">Address : 100 Feet Road, Near Bora Public School, Chawala Colony, Chawala Colony, Faridabad, Haryana 121004 </p>
+                        <a target="_blank" href="https://www.google.com/maps/place/Educational+Cum+Vocational+Association+For+The+Disabled/@28.3821984,77.2330763,12z/data=!4m9!1m2!2m1!1sEducational+Cum+Vocational+Association+For+The+Disabled!3m5!1s0x390cdc3c2e0cb663:0x8c683c4e794383b8!8m2!3d28.3822889!4d77.3030292!15sCjdFZHVjYXRpb25hbCBDdW0gVm9jYXRpb25hbCBBc3NvY2lhdGlvbiBGb3IgVGhlIERpc2FibGVkkgEcc29jaWFsX3NlcnZpY2VzX29yZ2FuaXphdGlvbghttps://www.google.com/maps/place/Educational+Cum+Vocational+Association+For+The+Disabled/@28.3821984,77.2330763,12z/data=!4m9!1m2!2m1!1sEducational+Cum+Vocational+Association+For+The+Disabled!3m5!1s0x390cdc3c2e0cb663:0x8c683c4e794383b8!8m2!3d28.3822889!4d77.3030292!15sCjdFZHVjYXRpb25hbCBDdW0gVm9jYXRpb25hbCBBc3NvY2lhdGlvbiBGb3IgVGhlIERpc2FibGVkkgEcc29jaWFsX3NlcnZpY2VzX29yZ2FuaXphdGlvbg" class="btn btn-success btn-sm">Locate Us</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 reorder">
+                    <div class="event-box">
+                        <img src="{{ url_for('static', filename='images/events/image_08.jpg') }}" alt="">
+                        <h4 class="td-name">Sai Kripa</h4>
+                        <p class="td-contact raises"><span>Contact : +91 120 2531521</span></p>
+                        <p class="td-address desic">Address : Z-133-134, Amaltash Marg, Sector 12, Noida, Uttar Pradesh 201301 </p>
+                        <a target="_blank" href="https://www.google.com/maps/place/Saikripa/@28.6175025,77.2194635,12z/data=!4m19!1m13!4m12!1m4!2m2!1d77.2345881!2d28.6610779!4e1!1m6!1m2!1s0x390ce505813daffd:0x9fc40051bc11f8a0!2sSai+Kripa+ngo!2m2!1d77.3441822!2d28.5977082!3m4!1s0x390ce505813daffd:0x9fc40051bc11f8a0!8m2!3d28.5977082!4d77.3441822" class="btn btn-success btn-sm">Locate Us</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 reorder">
+                    <div class="event-box">
+                        <img src="{{ url_for('static', filename='images/events/image_09.jpg') }}" alt="">
+                        <h4 class="td-name">Ashadeep Association</h4>
+                        <p class="td-contact raises"><span>Contact : +91 22 28353880</span></p>
+                        <p class="td-address desic">Address : Shakti Apartments, Cardinal Gracious Rd, Chakala, Andheri (E) Mumbai, Maharashtra -  400099 </p>
+                        <a target="_blank" href="https://www.google.com/maps/place/Ashadeep+Association/@19.1093828,72.8559023,17z/data=!3m1!4b1!4m5!3m4!1s0x3be7c876a5d723e5:0x7078bf6bb7c10b33!8m2!3d19.1093881!4d72.8581433" class="btn btn-success btn-sm">Locate Us</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 reorder">
+                    <div class="event-box">
+                        <img src="{{ url_for('static', filename='images/events/image_07.jpg') }}" alt="">
+                        <h4 class="td-name">Salaam Baalak Trust</h4>
+                        <p class="td-contact raises"><span>Contact : +91 01123586416</span></p>
+                        <p class="td-address desic">Address : 2nd Floor, DDA Community Centre, Chandiwali Gali, Paharganj New Delhi - 110055 </p>
+                        <a target="_blank" href="https://www.google.com/maps/place/Salaam+Baalak+Trust/@28.6509484,77.210317,14z/data=!4m19!1m13!4m12!1m4!2m2!1d77.2345881!2d28.6610779!4e1!1m6!1m2!1s0x390cfd4120629737:0xae2fdffd7af7e141!2sSalaam+Baalak+Trust+-+Delhi!2m2!1d77.2150561!2d28.642233!3m4!1s0x390cfd4120629737:0xae2fdffd7af7e141!8m2!3d28.642233!4d77.2150561" class="btn btn-success btn-sm">Locate Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <h2>About Us</h2>
+                    <p>
+                        Our platform is an application where individuals can scan and upload data of any person who they believe are missing.
+                    </p>
+                    <p>Our product will extract the face from those image scans and will save it with the data (eg Name, Age, Father/Mother Name, current location etc) of the missing person.
+                    </p>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <h2>Useful Links</h2>
+                    <ul class="list-unstyled link-list">
+                        <li><a ui-sref="home" href="{{ url_for('index') }}">Home</a><i class="fa fa-angle-right"></i></li>
+                        <li><a ui-sref="about" href="{{ url_for('ngo') }}">NGOs</a><i class="fa fa-angle-right"></i></li>
+                        <li><a ui-sref="products" href="{{ url_for('services') }}">Find Missing Person</a><i class="fa fa-angle-right"></i></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-12 map-img">
+                    <h2>Contact Us</h2>
+                    <address class="md-margin-bottom-40">
+                        Manipal University Jaipur <br>
+                        Jaipur-Ajmer Express Highway, Dehmi Kalan <br>
+                        Jaipur, Rajasthan, INDIA <br>
+                        Phone: <a href="tel:+919643590272"> 9643590272</a> <br>
+                        Email: <a href="mailto:missing-person-finder@gmail.com" class="">missing-person-finder@gmail.com</a><br>
+                    </address>
+
+                </div>
+            </div>
+            <div class="nav-box row clearfix">
+                <div class="inner col-md-9 clearfix">
+                    <ul class="footer-nav clearfix">
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li><a href="{{ url_for('ngo') }}">NGOs</a></li>
+                    </ul>
+                </div>
+                  <div class="donate-link col-md-3"><a href="{{ url_for('services') }}" class="btn btn-primary "><span class="btn-title">Find Missing Person</span></a></div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://kit.fontawesome.com/612fc82eca.js" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='plugins/scroll-fixed/jquery-scrolltofixed-min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
